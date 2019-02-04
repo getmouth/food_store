@@ -1,0 +1,27 @@
+= form_for @product do |f|
+  - if @product.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
+      ul
+        - @product.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :image
+    = f.text_field :image_url
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :category
+    = f.select :category, %w(Vegetables Meats Fruits Fish), prompt:'Select Category'
+  .field
+    = f.label :city
+    = f.select :city_id, City.all.collect{|city| [city.name, city.id] }, {include_blank: 'Select City'}
+  .actions = f.submit

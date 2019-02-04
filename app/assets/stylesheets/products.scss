@@ -1,0 +1,52 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.products {
+    
+    .product {
+        margin: 35px 3px;
+        // -webkit-box-shadow: 2px 3px 10px 4px black;
+	    //     -moz-box-shadow: 2px 3px 10px 4px black;
+                box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.45);
+        .product-img {
+            img {
+                width: 100%;
+            }
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            background:  rgba(0, 0, 0, 0.582);
+            
+            .product-price {
+                margin-top: -65px;
+                top: -65px;
+                position: relative;
+                padding-left: 130px;
+              
+
+                a,.price {
+                    font-weight: bold;
+                }
+
+                .price {
+                    background: #c83232;
+                    padding: 8px;
+                    border-radius: 4px 15px;
+                    color: #fff;
+                    margin-right: 1px;
+                }
+            }
+
+            h3 {
+                
+                color: white;
+                padding: 25px 15px;
+                position: relative;
+                top: -21px;   
+            }
+        }
+    }
+
+}

@@ -1,0 +1,16 @@
+
+div.row
+  - @products.each do |product|
+    div.col-md-4.products
+      div.product
+        div.product-img = link_to image_tag(product.image_url), product
+        div.product-details
+          h3 = product.name
+          div.product-price
+            span.price = number_to_currency(product.price) 
+            a class="btn btn-primary" href="#" Add to Cart
+    
+  
+      / td = link_to 'Edit', edit_product_path(product)
+      / td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
+

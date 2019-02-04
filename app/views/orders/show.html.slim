@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @order.name
+p
+  strong Address:
+  = @order.address
+p
+  strong City:
+  = @order.city
+p
+  strong Zipcode:
+  = @order.zipcode
+p
+  strong Email:
+  = @order.email
+
+=> link_to 'Edit', edit_order_path(@order)
+'|
+=< link_to 'Back', orders_path
