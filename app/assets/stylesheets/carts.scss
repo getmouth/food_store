@@ -1,3 +1,28 @@
 // Place all the styles related to the Carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.carts {
+    padding-top: 20px;
+
+    .table {
+        .product-info {
+            width: 40%;
+            img {
+                width: 20%;
+                margin-right: 30px;
+            }
+        }
+
+        .product-price, .product-quantity, .cart-actions {
+            vertical-align: middle;
+        }
+
+        .checkout {
+            color: #fff;
+        }
+
+
+         
+    }
+}

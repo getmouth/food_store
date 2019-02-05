@@ -12,6 +12,7 @@
   <body>
     <%= render 'layouts/navbar'%>
     <div class="container">
+      <main class="<%= controller.controller_name %>">
       <%= yield %>
     </div>
   </body>

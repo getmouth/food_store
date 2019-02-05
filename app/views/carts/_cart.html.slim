@@ -1,0 +1,8 @@
+- if notice
+    div#notice = notice
+    table class ="table"
+        - @cart.line_items.each do |line_item|
+            tr
+                td = line_item.product.name
+                td = line_item.quantity
+           

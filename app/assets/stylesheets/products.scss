@@ -20,13 +20,18 @@
             background:  rgba(0, 0, 0, 0.582);
             
             .product-price {
+                width: 100%;
                 margin-top: -65px;
                 top: -65px;
                 position: relative;
-                padding-left: 130px;
+                padding-left: 100px;
+
+                form {
+                    display: inline;
+                }
               
 
-                a,.price {
+                .add-to-cart,.price {
                     font-weight: bold;
                 }
 
@@ -36,6 +41,7 @@
                     border-radius: 4px 15px;
                     color: #fff;
                     margin-right: 1px;
+                    font-size: 16px;
                 }
             }
 

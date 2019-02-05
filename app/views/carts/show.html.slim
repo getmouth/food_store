@@ -1,6 +1,36 @@
-p#notice = notice
+- if notice
+    div#notice = notice
+table class ="table table-striped"
+    thead
+        tr 
+            th scope ="col" Product
+            th scope ="col" Quantity
+            th scope ="col" Price
+            th
+            th
 
-
-=> link_to 'Edit', edit_cart_path(@cart)
-'|
-=< link_to 'Back', carts_path
+    - @cart.line_items.each do |line_item|
+        tr  
+            td.product-info
+                => image_tag(line_item.product.image_url)
+                = line_item.product.name 
+            td.product-quantity 
+                = line_item.quantity
+            td.product-price 
+                = number_to_currency(line_item.product.price)
+            td.cart-actions
+                a> href="/" 
+                    i class="glyphicon glyphicon-trash"
+            td.cart-actions
+                a> href="/" 
+                     i class="glyphicon glyphicon-refresh"
+                
+    tfoot
+        tr
+            td
+                = link_to "Continue Shopping", products_path, class: "btn btn-default"
+            td colspan= 1 Total:
+            td = number_to_currency(@cart.total_price)
+            td
+            td
+                = link_to "Checkout", products_path, class: "btn btn-success btn-lg checkout"
